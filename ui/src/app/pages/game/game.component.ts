@@ -15,21 +15,12 @@ export class GameComponent implements OnInit {
   ngOnInit() { }
 
   public async startGame(names: { namePlayerOne: string, namePlayerTwo: string }) {
-    debugger
-    this.gameService.setPlayers(names);
-    const players = [
-      {
-        name: names.namePlayerOne,
-        color: 'red'
-      },
-      {
-        name: names.namePlayerTwo,
-        color: 'blue'
-      }
-    ]
-    await this.gameService.start(players);
-    this.gameService.setStatus('PLAYING');
     console.log(names);
+    this.gameService.setPlayers(names);
+    this.gameService.start(names.namePlayerOne, names.namePlayerTwo).then(data => {
+      console.log(data);
+      this.gameService.setStatus('PLAYING');
+    });
   }
 
   public again() {
@@ -39,6 +30,12 @@ export class GameComponent implements OnInit {
   public quit() {
     this.gameService.setStatus('START');
     console.log('quit');
+  }
+
+  test() {
+    this.gameService.makeMove().then(data => {
+      console.log(data);
+    });
   }
 
 }

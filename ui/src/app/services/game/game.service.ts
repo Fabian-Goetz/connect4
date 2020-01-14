@@ -28,24 +28,49 @@ export class GameService {
     this.status = status;
   }
 
-  public start(players: any) {
+  public start(playerOne: string, playerTwo: string) {
     const url = this.baseUrl + '/create-game';
 
     const body = [
       {
-        name: this.getPlayers().names.namePlayerOne,
-        color: 'red'
+        name: playerOne,
+        color: 'blue'
       },
       {
-        name: this.getPlayers().names.namePlayerTwo,
-        color: 'blue'
+        name: playerTwo,
+        color: 'yellow'
       }
     ]
     return this.http.post(url, body).toPromise();
   }
 
   public makeMove() {
-
+    const url = this.baseUrl + '/insert-chip';
+    const body = {
+      "round": {
+        "board": {
+          "chips": [],
+          "width": 7,
+          "height": 6
+        },
+        "players": [
+          {
+            "name": "Fabian",
+            "color": "red",
+            "hasTurn": false
+          },
+          {
+            "name": "Dimitri",
+            "color": "blue",
+            "hasTurn": false
+          }
+        ],
+        "roundNumber": 0,
+        "isOver": false
+      },
+      "column": 1
+    };
+    return this.http.post(url, body).toPromise();
   }
 
 }

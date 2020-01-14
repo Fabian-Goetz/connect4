@@ -3,7 +3,7 @@ package controllers
 import daos.{BoardDao, GameDao, PlayerDao, RoundDao}
 import javax.inject.{Inject, Singleton}
 import models.{GameModel, PlayerModel}
-import play.api.mvc.{BaseController, ControllerComponents}
+import play.api.mvc.{AbstractController, BaseController, ControllerComponents}
 import services.{GameService, PlayerService}
 
 import scala.concurrent.Future
@@ -13,14 +13,14 @@ import scala.util.{Failure, Success, Try}
 
 
 @Singleton
-class PlayerController @Inject()(val controllerComponents: ControllerComponents,
+class PlayerController @Inject()(controllerComponents: ControllerComponents,
                                gameController: GameController,
                                boardController: BoardController,
                                playerService: PlayerService,
                                playerDao: PlayerDao,
                                roundDao: RoundDao,
                                boardDao: BoardDao
-                              ) extends BaseController {
+                                ) extends AbstractController(controllerComponents) {
 
   /**
    * Creates a player

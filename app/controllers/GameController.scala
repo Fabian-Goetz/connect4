@@ -16,14 +16,14 @@ import scala.util.{Failure, Success, Try}
  * application's home page.
  */
 @Singleton
-class GameController @Inject()(val controllerComponents: ControllerComponents,
+class GameController @Inject()(controllerComponents: ControllerComponents,
                                roundController: RoundController,
                                boardController: BoardController,
                                gameService: GameService,
                                gameDao: GameDao,
                                roundDao: RoundDao,
                                boardDao: BoardDao
-                               ) extends BaseController {
+                              ) extends AbstractController(controllerComponents) {
 
   /**
    * Creates a new game with a new round and 2 players

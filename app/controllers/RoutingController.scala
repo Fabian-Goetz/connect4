@@ -14,10 +14,10 @@ import scala.util.{Failure, Success}
  * application's home page.
  */
 @Singleton
-class RoutingController @Inject()(val controllerComponents: ControllerComponents,
+class RoutingController @Inject()(controllerComponents: ControllerComponents,
                                   gameController: GameController,
                                   boardController: BoardController
-                                 ) extends BaseController {
+                                 ) extends AbstractController(controllerComponents) {
 
   /**
    * Create an Action to render an HTML page.

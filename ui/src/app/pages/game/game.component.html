@@ -1,6 +1,8 @@
 <div class="h-100">
   <div class="row h-100 justify-content-center align-items-center">
 
+    <button mat-button (click)="test()">test chip</button>
+
     <ng-container *ngIf="gameService.getStatus() === 'START'">
       <app-start (start)="startGame($event)"></app-start>
     </ng-container>
