@@ -42,9 +42,10 @@ class BoardController @Inject()(controllerComponents: ControllerComponents,
         val chip = ChipModel(player, PositionModel(x = column))
         boardService.insertChip(round.board, chip).flatMap {
           case Success(b) => // TODO check for winner
-            roundService.checkForWinner(round.copy(board = b)).map(result => {
-              Success(result)
-            })
+            roundService.checkForWinner(round.copy(board = b)).map {
+              case Some(winnerRound) => Success(Some(roundService.swapTurns(winnerRound)))
+              case _ => Success(Some(roundService.swapTurns(round)))
+            }
           case Failure(exception) => Future.successful(Failure(exception))
         }
       case _ => Future.successful(Failure(new NoSuchElementException(s"Current player doesn't exist")))

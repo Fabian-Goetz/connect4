@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="25d99617-8625-4077-9a1f-6c644b6fd9c2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/RoundService.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/RoundService.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/BoardController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/BoardController.scala" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -133,7 +133,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579002415074</updated>
-      <workItem from="1579002420230" duration="7024000" />
+      <workItem from="1579002420230" duration="7509000" />
     </task>
     <task id="LOCAL-00001" summary="added singletons to controllers">
       <created>1579006028190</created>
@@ -170,7 +170,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579010540805</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="updated insert chip">
+      <created>1579011275337</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1579011275337</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
