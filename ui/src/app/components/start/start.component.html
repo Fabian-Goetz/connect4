@@ -1,0 +1,20 @@
+<app-card-wrapper title="Enter your names">
+    <form [formGroup]="form" (ngSubmit)="onStartGame(form.value)">
+        <p>
+            <mat-form-field class="w-100" appearance="outline">
+                <mat-label>Name player one</mat-label>
+                <input formControlName="namePlayerOne" matInput>
+                <mat-icon class="player-one" matSuffix>fiber_manual_record</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field class="w-100" appearance="outline">
+                <mat-label>Name player two</mat-label>
+                <input formControlName="namePlayerTwo" matInput>
+                <mat-icon class="player-two" matSuffix>fiber_manual_record</mat-icon>
+            </mat-form-field>
+        </p>
+        <button class="w-100" mat-flat-button color="primary" [disabled]="form.invalid" type="submit">START
+            GAME</button>
+    </form>
+</app-card-wrapper>
