@@ -36,7 +36,7 @@ class GameController @Inject()(controllerComponents: ControllerComponents,
       newBoard: BoardModel <- boardDao.create
       firstRound <- roundDao.create(newBoard)
       players <- gameService.addPlayers(newGame, request.map(x => PlayerModel(name = x.name, color = x.color)))
-      startingPlayer <- getStartingPlayer(newGame)
+      startingPlayer <- getStartingPlayer(newGame.copy(players = request.map(x => PlayerModel(name = x.name, color = x.color)).toList))
     } yield (newGame, newBoard, firstRound, players, startingPlayer)
 
     actions.map { case (newGame, newBoard, firstRound, t_players, startingPlayer) =>
