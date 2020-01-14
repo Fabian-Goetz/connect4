@@ -17,7 +17,7 @@ export class GameService {
     [0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0]
-  ];;
+  ];
   private status = 'START';
   private baseUrl = 'http://localhost:9000';
 
