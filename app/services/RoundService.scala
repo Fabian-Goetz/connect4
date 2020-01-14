@@ -7,6 +7,7 @@ import scala.concurrent.ExecutionContext.Implicits.global
 
 class RoundService {
   val boardService = new BoardService()
+
   /**
    * Returns the next player
    *
@@ -30,9 +31,16 @@ class RoundService {
    *
    * @return
    */
-  def checkForWinner(round: RoundModel): Future[Option[List[ChipModel]]] = {
+  def checkForWinner(round: RoundModel): Future[Option[RoundModel]] = {
     round.currentPlayer match {
-      case Some(currentPlayer) => boardService.checkForWinningChips(round.board, currentPlayer)
+      case Some(currentPlayer) => boardService.checkForWinningChips(round.board, currentPlayer).map {
+        case Some(winningChips) =>
+          Some(round.copy(winner = Some(currentPlayer),
+            winningChips = Some(winningChips),
+            isOver = true
+          ))
+        case _ => None
+      }
       case _ => Future.successful(None)
     }
   }
@@ -65,7 +73,8 @@ class RoundService {
 
   /**
    * Returns the current round based on the latest round number
-   * @param game: game
+   *
+   * @param game : game
    * @return
    */
   def getCurrentRound(game: GameModel): Future[Option[RoundModel]] = Future(game.rounds.sortBy(_.roundNumber).lastOption)
