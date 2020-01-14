@@ -30,21 +30,11 @@ export class GameService {
 
   public start(playerOne: string, playerTwo: string) {
     const url = this.baseUrl + '/create-game';
-
-    const body = [
-      {
-        name: playerOne,
-        color: 'blue'
-      },
-      {
-        name: playerTwo,
-        color: 'yellow'
-      }
-    ]
+    const body = { players: this.getPlayers() };
     return this.http.post(url, body).toPromise();
   }
 
-  public makeMove() {
+  public makeMove(col: number) {
     const url = this.baseUrl + '/insert-chip';
     const body = {
       "round": {
@@ -53,22 +43,16 @@ export class GameService {
           "width": 7,
           "height": 6
         },
-        "players": [
-          {
-            "name": "Fabian",
-            "color": "red",
-            "hasTurn": false
-          },
-          {
-            "name": "Dimitri",
-            "color": "blue",
-            "hasTurn": false
-          }
-        ],
+        "players": this.getPlayers(),
+        "currentPlayer": {
+          "name": "Fabian",
+          "color": "red",
+          "hasTurn": false
+        },
         "roundNumber": 0,
         "isOver": false
       },
-      "column": 1
+      "column": col
     };
     return this.http.post(url, body).toPromise();
   }

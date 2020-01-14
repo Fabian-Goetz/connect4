@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="25d99617-8625-4077-9a1f-6c644b6fd9c2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1a94035d-220a-49a5-a54f-0eefd8839f47" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/ui/src/app/components/board/board.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/components/board/board.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/app/pages/game/game.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/pages/game/game.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/app/pages/game/game.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/pages/game/game.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/app/services/game/game.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/services/game/game.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,13 +113,13 @@
     </option>
     <option name="projectSyncType">
       <map>
-        <entry key="$PROJECT_DIR$/../../../../../../Johner Institut/dev/approvalmachine/ji_approvalmachine_backend" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../../../../../Johner Institut/dev/approvalmachine/ji_approvalmachine_processes" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$/../../../../../../Johner Institut/dev/approvalmachine/ji_ba_it_security_monitor_backend" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../connect-four" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../connect-four2" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/connect4" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../../Teamprojekt/zeta/api" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../../../Johner Institut/dev/approvalmachine/ji_approvalmachine_backend" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../../../Johner Institut/dev/approvalmachine/ji_approvalmachine_processes" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../../../Johner Institut/dev/approvalmachine/ji_ba_it_security_monitor_backend" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../../../../../../dev/dataposcrmbackend" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../../../../../../dev/java-play-react-seed" value="PREVIEW" />
       </map>
@@ -160,7 +162,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

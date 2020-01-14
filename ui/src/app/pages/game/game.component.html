@@ -8,7 +8,7 @@
     </ng-container>
 
     <ng-container *ngIf="gameService.getStatus() === 'PLAYING'">
-      <app-board></app-board>
+      <app-board (drop)="makeMove($event)"></app-board>
     </ng-container>
 
     <ng-container *ngIf="gameService.getStatus() === 'FINISH'">
