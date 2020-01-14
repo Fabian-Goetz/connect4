@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="92659e7d-a793-4a59-bdfb-a98dbe71a87c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-=======
     <list default="true" id="25d99617-8625-4077-9a1f-6c644b6fd9c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/GameController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/GameController.scala" afterDir="false" />
->>>>>>> master
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +13,11 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -45,18 +43,12 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-<<<<<<< HEAD
-  <component name="ProjectId" id="1WNzM2HQHCHxeDDMwX8nUvKQmYQ" />
-=======
   <component name="ProjectId" id="1WNuXrj2wkz7rsOHVUWmbBmaRn9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
->>>>>>> master
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-<<<<<<< HEAD
-=======
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -71,7 +63,6 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Fabian\Documents\My_Documents\Studium\Master\code\MPS\connect4" />
     </key>
->>>>>>> master
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -98,7 +89,7 @@
           <value>
             <list>
               <ExternalProjectPojo>
-                <option name="name" value="root [file:/Users/dimitrikreik/Dimitri/HTWG/Master/1.%20Semester/Moderne%20Programmiersprachen/Projekt/connect4/]" />
+                <option name="name" value="root [file:/C:/Users/Fabian/Documents/My_Documents/Studium/Master/code/MPS/connect4/]" />
                 <option name="path" value="$PROJECT_DIR$" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
@@ -120,8 +111,15 @@
     </option>
     <option name="projectSyncType">
       <map>
-        <entry key="$USER_HOME$/Desktop/scalafx-hello-world-master" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../../../Johner Institut/dev/approvalmachine/ji_approvalmachine_backend" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../../../Johner Institut/dev/approvalmachine/ji_approvalmachine_processes" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../../../Johner Institut/dev/approvalmachine/ji_ba_it_security_monitor_backend" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../connect-four" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../connect-four2" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/connect4" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../Teamprojekt/zeta/api" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../../../dev/dataposcrmbackend" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../../../../../dev/java-play-react-seed" value="PREVIEW" />
       </map>
     </option>
   </component>
@@ -130,21 +128,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="92659e7d-a793-4a59-bdfb-a98dbe71a87c" name="Default Changelist" comment="" />
-      <created>1579004788640</created>
+      <changelist id="25d99617-8625-4077-9a1f-6c644b6fd9c2" name="Default Changelist" comment="" />
+      <created>1579002415074</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-<<<<<<< HEAD
-      <updated>1579004788640</updated>
-      <workItem from="1579004789949" duration="603000" />
-=======
       <updated>1579002415074</updated>
-<<<<<<< HEAD
-      <workItem from="1579002420230" duration="3469000" />
->>>>>>> master
-=======
-      <workItem from="1579002420230" duration="4379000" />
->>>>>>> master
+      <workItem from="1579002420230" duration="4649000" />
     </task>
     <task id="LOCAL-00001" summary="added singletons to controllers">
       <created>1579006028190</created>
@@ -153,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579006028190</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed bug in creating game">
+      <created>1579008638850</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579008638850</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,11 +166,9 @@
       </map>
     </option>
   </component>
-<<<<<<< HEAD
-=======
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added singletons to controllers" />
-    <option name="LAST_COMMIT_MESSAGE" value="added singletons to controllers" />
+    <MESSAGE value="fixed bug in creating game" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bug in creating game" />
   </component>
->>>>>>> master
 </project>
