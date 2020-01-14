@@ -39,6 +39,7 @@ class RoundService {
             winningChips = Some(winningChips),
             isOver = true
           ))
+        case None => Some(round)
         case _ => None
       }
       case _ => Future.successful(None)
