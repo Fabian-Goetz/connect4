@@ -30,7 +30,7 @@ export class GameService {
 
   public start() {
     const url = this.baseUrl + '/create-game';
-    const body = { players: this.getPlayers() };
+    const body = this.getPlayers();
     return this.http.post(url, body).toPromise();
   }
 

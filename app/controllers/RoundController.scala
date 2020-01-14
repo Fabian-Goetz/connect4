@@ -55,7 +55,7 @@ class RoundController @Inject()(controllerComponents: ControllerComponents,
    * @param round : round
    * @return
    */
-  def checkForWinner(round: RoundModel): Future[Option[List[ChipModel]]] = roundService.checkForWinner(round)
+  def checkForWinner(round: RoundModel): Future[Option[RoundModel]] = roundService.checkForWinner(round)
 
   /**
    * Swaps the current player of the given round

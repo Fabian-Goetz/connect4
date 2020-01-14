@@ -44,10 +44,4 @@ export class GameComponent implements OnInit {
     console.log('quit');
   }
 
-  public makeMove(col: number) {
-    this.gameService.makeMove(col).then(data => {
-      console.log(data);
-    });
-  }
-
 }

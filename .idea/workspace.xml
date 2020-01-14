@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa8f5353-9e05-473f-b872-1430a9aecf3e" name="Default Changelist" comment="">
+    <list default="true" id="2e325aed-dd6f-4bb1-bcbf-e47b4d2018ab" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/RoundController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/RoundController.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/app/components/board/board.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/components/board/board.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/app/pages/game/game.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/pages/game/game.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/app/pages/game/game.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/pages/game/game.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/src/app/services/game/game.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/services/game/game.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -132,7 +137,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579002415074</updated>
-      <workItem from="1579002420230" duration="5862000" />
+      <workItem from="1579002420230" duration="6294000" />
     </task>
     <task id="LOCAL-00001" summary="added singletons to controllers">
       <created>1579006028190</created>
@@ -155,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579008903129</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="updated insert chip">
+      <created>1579010129200</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579010129200</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -178,6 +190,7 @@
     <MESSAGE value="added singletons to controllers" />
     <MESSAGE value="fixed bug in creating game" />
     <MESSAGE value="updated gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated gitignore" />
+    <MESSAGE value="updated insert chip" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated insert chip" />
   </component>
 </project>

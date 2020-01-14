@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { GameService } from 'src/app/services/game/game.service';
 
 @Component({
   selector: 'app-board',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class BoardComponent implements OnInit {
 
-  @Input() board = [
+  public board = [
     [0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0],
@@ -15,14 +16,15 @@ export class BoardComponent implements OnInit {
     [0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0]
   ];
-  @Output('drop') drop: EventEmitter<any> = new EventEmitter<any>();
 
-  constructor() { }
+  constructor(private gameService: GameService) { }
 
   ngOnInit() {}
 
-  onDrop(event) {
-    this.drop.emit(event);
+  onDrop(col: number) {
+    this.gameService.makeMove(col).then(data => {
+      console.log(data);
+    });
   }
 
 }
