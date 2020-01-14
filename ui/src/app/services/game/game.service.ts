@@ -28,7 +28,7 @@ export class GameService {
     this.status = status;
   }
 
-  public start(playerOne: string, playerTwo: string) {
+  public start() {
     const url = this.baseUrl + '/create-game';
     const body = { players: this.getPlayers() };
     return this.http.post(url, body).toPromise();

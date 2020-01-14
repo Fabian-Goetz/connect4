@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fa8f5353-9e05-473f-b872-1430a9aecf3e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/BoardController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/BoardController.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/GameModel.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/GameModel.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/RoundService.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/RoundService.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/src/app/services/game/game.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/services/game/game.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
