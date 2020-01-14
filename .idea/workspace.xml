@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="92659e7d-a793-4a59-bdfb-a98dbe71a87c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+=======
+    <list default="true" id="25d99617-8625-4077-9a1f-6c644b6fd9c2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/GameController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/GameController.scala" afterDir="false" />
+>>>>>>> master
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,7 +45,12 @@
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectId" id="1WNzM2HQHCHxeDDMwX8nUvKQmYQ" />
+=======
+  <component name="ProjectId" id="1WNuXrj2wkz7rsOHVUWmbBmaRn9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+>>>>>>> master
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -127,9 +139,21 @@
       <workItem from="1579004789949" duration="603000" />
 =======
       <updated>1579002415074</updated>
+<<<<<<< HEAD
       <workItem from="1579002420230" duration="3469000" />
 >>>>>>> master
+=======
+      <workItem from="1579002420230" duration="4379000" />
+>>>>>>> master
     </task>
+    <task id="LOCAL-00001" summary="added singletons to controllers">
+      <created>1579006028190</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579006028190</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,4 +170,11 @@
       </map>
     </option>
   </component>
+<<<<<<< HEAD
+=======
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added singletons to controllers" />
+    <option name="LAST_COMMIT_MESSAGE" value="added singletons to controllers" />
+  </component>
+>>>>>>> master
 </project>
