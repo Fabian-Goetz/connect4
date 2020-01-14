@@ -35,6 +35,7 @@ export class GameService {
   }
 
   public makeMove(col: number) {
+    console.log('col: ', col);
     const url = this.baseUrl + '/insert-chip';
     const body = {
       "round": {

@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2e325aed-dd6f-4bb1-bcbf-e47b4d2018ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/RoundController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/RoundController.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/app/components/board/board.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/components/board/board.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/app/pages/game/game.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/pages/game/game.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/app/pages/game/game.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/pages/game/game.component.ts" afterDir="false" />
+    <list default="true" id="426bb1df-02c5-4db9-8ffb-4074af82811f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/services/RoundService.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/RoundService.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/src/app/services/game/game.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/services/game/game.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
