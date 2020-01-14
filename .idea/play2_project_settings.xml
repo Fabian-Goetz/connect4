@@ -6,14 +6,14 @@
         <entry key="connect4">
           <value>
             <ProjectSettingsEntry>
-              <option name="playDistrPath" value="$USER_HOME$/AppData/Local/Coursier/cache/v1/https/repo1.maven.org/maven2/com/typesafe/play/play_2.13/2.8.0/play_2.13-2.8.0.jar" />
+              <option name="playDistrPath" value="$USER_HOME$/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/typesafe/play/play_2.13/2.8.0/play_2.13-2.8.0.jar" />
             </ProjectSettingsEntry>
           </value>
         </entry>
         <entry key="root">
           <value>
             <ProjectSettingsEntry>
-              <option name="confDir" value="C:\Users\Fabian\Documents\My_Documents\Studium\Master\code\MPS\connect4\app" />
+              <option name="confDir" value="$PROJECT_DIR$/app" />
               <option name="templateImports">
                 <list>
                   <option value="_root_.play.twirl.api.TwirlFeatureImports._" />
@@ -36,7 +36,7 @@
                   <option value="controllers.Assets.Asset" />
                 </list>
               </option>
-              <option name="uri" value="/C:/Users/Fabian/Documents/My_Documents/Studium/Master/code/MPS/connect4" />
+              <option name="uri" value="$PROJECT_DIR$/../../../../1.%20Semester/Moderne%20Programmiersprachen/Projekt/connect4" />
             </ProjectSettingsEntry>
           </value>
         </entry>
