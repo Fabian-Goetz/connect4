@@ -10,7 +10,7 @@
     </ng-container>
 
     <ng-container *ngIf="gameService.getStatus() === 'FINISH'">
-      <app-end [winner]="'Dimitri'" (again)="again()" (quit)="quit()"></app-end>
+      <app-end [winner]="gameService.getWinner().name" (again)="again()" (quit)="quit()"></app-end>
     </ng-container>
 
   </div>

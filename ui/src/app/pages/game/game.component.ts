@@ -29,17 +29,23 @@ export class GameComponent implements OnInit {
       ];
 
     this.gameService.setPlayers(players);
-    this.gameService.start().then(data => {
+    this.gameService.setCurrentPlayer(players[0]);
+    this.gameService.start().then((data: any) => {
       console.log(data);
+      this.gameService.setBoard(data.game.rounds[0].board);
       this.gameService.setStatus('PLAYING');
     });
   }
 
   public again() {
+    this.gameService.reset();
     this.gameService.setStatus('PLAYING');
+    console.log(this.gameService.getSimpleBoard());
+    console.log(this.gameService.getBoard());
   }
 
   public quit() {
+    this.gameService.reset();
     this.gameService.setStatus('START');
     console.log('quit');
   }
