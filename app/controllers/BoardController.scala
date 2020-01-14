@@ -16,10 +16,10 @@ import scala.util.{Failure, Success, Try}
  * application's home page.
  */
 @Singleton
-class BoardController @Inject()(val controllerComponents: ControllerComponents,
+class BoardController @Inject()(controllerComponents: ControllerComponents,
                                 boardService: BoardService,
                                 boardDao: BoardDao
-                                ) extends BaseController with Observable {
+                                ) extends AbstractController(controllerComponents)  with Observable {
 
   /**
    * Creates a board
