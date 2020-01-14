@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1a94035d-220a-49a5-a54f-0eefd8839f47" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/ui/src/app/components/board/board.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/components/board/board.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/app/pages/game/game.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/pages/game/game.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/app/pages/game/game.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/pages/game/game.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/src/app/services/game/game.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/ui/src/app/services/game/game.service.ts" afterDir="false" />
+    <list default="true" id="fa8f5353-9e05-473f-b872-1430a9aecf3e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/BoardController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/BoardController.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/GameModel.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/GameModel.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/RoundService.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/RoundService.scala" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -135,7 +136,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579002415074</updated>
-      <workItem from="1579002420230" duration="4649000" />
+      <workItem from="1579002420230" duration="5862000" />
     </task>
     <task id="LOCAL-00001" summary="added singletons to controllers">
       <created>1579006028190</created>
@@ -151,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579008638850</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="updated gitignore">
+      <created>1579008903129</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579008903129</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +181,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added singletons to controllers" />
     <MESSAGE value="fixed bug in creating game" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed bug in creating game" />
+    <MESSAGE value="updated gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated gitignore" />
   </component>
 </project>

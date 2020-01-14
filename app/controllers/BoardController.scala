@@ -4,7 +4,7 @@ import daos.BoardDao
 import javax.inject._
 import models.{BoardModel, ChipModel, PositionModel, RoundModel}
 import play.api.mvc._
-import services.BoardService
+import services.{BoardService, RoundService}
 import utils.Observable
 
 import scala.concurrent.Future
@@ -18,8 +18,9 @@ import scala.util.{Failure, Success, Try}
 @Singleton
 class BoardController @Inject()(controllerComponents: ControllerComponents,
                                 boardService: BoardService,
+                                roundService: RoundService,
                                 boardDao: BoardDao
-                                ) extends AbstractController(controllerComponents)  with Observable {
+                               ) extends AbstractController(controllerComponents) with Observable {
 
   /**
    * Creates a board
@@ -35,14 +36,16 @@ class BoardController @Inject()(controllerComponents: ControllerComponents,
    * @param column : column to insert the chip
    * @return
    */
-  def insertChip(round: RoundModel, column: Int): Future[Try[BoardModel]] = {
+  def insertChip(round: RoundModel, column: Int): Future[Try[Option[RoundModel]]] = {
     round.currentPlayer match {
       case Some(player) =>
         val chip = ChipModel(player, PositionModel(x = column))
-        boardService.insertChip(round.board, chip).map {
-          case Success(b) => notifyObservers(b)
-            Success(b)
-          case e => e
+        boardService.insertChip(round.board, chip).flatMap {
+          case Success(b) => // TODO check for winner
+            roundService.checkForWinner(round.copy(board = b)).map(result => {
+              Success(result)
+            })
+          case Failure(exception) => Future.successful(Failure(exception))
         }
       case _ => Future.successful(Failure(new NoSuchElementException(s"Current player doesn't exist")))
     }

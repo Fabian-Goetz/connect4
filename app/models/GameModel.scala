@@ -18,9 +18,10 @@ object GameModel {
 
 
 case class CreateGameRequest(
-                          name: String,
-                          color: String
-                          )
+                              name: String,
+                              color: String,
+                              hasTurn: Boolean
+                            )
 
 object CreateGameRequest {
   implicit val createGameModel_format: OFormat[CreateGameRequest] = Json.format[CreateGameRequest]
