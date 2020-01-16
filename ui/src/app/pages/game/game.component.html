@@ -1,0 +1,17 @@
+<div class="h-100">
+  <div class="row h-100 justify-content-center align-items-center">
+
+    <ng-container *ngIf="gameService.getStatus() === 'START'">
+      <app-start (start)="startGame($event)"></app-start>
+    </ng-container>
+
+    <ng-container *ngIf="gameService.getStatus() === 'PLAYING'">
+      <app-board></app-board>
+    </ng-container>
+
+    <ng-container *ngIf="gameService.getStatus() === 'FINISH'">
+      <app-end [winner]="gameService.getWinner().name" (again)="again()" (quit)="quit()"></app-end>
+    </ng-container>
+
+  </div>
+</div>

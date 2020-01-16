@@ -1,0 +1,8 @@
+<app-card-wrapper [title]="gameService.getCurrentPlayer().name + '`s turn!'">
+    <mat-icon
+        [style.color]="gameService.getCurrentPlayer().name === gameService.getPlayers()[0].name ? '#0000FF' : '#FFFF00'"
+        class="icon">fiber_manual_record</mat-icon>
+    <cfb-board [board]="gameService.getSimpleBoard()" backgroundColor="#424242" playerOneColor="#0000FF"
+        playerTwoColor="#FFFF00" (drop)="onDrop($event)">
+    </cfb-board>
+</app-card-wrapper>

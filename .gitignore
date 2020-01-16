@@ -14,4 +14,5 @@ server.pid
 *.eml
 /dist/
 .cache
+/ui/node_modules
 .idea/workspace.xml
