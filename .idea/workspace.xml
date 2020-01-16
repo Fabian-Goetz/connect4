@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25d99617-8625-4077-9a1f-6c644b6fd9c2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__net_codingwell_scala_guice_2_13_4_2_6_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_modules_scala_swing_2_13_2_1_1_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/Connect4.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/gui/BoardControllerGui.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/gui/GameControllerGui.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/gui/GridInterface.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/connect4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/connect4.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/play2_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/play2_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sbt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/BoardController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/BoardController.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/GameController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/GameController.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/Observable.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/Observable.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/gui/SwingGUI.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gui/SwingGUI.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,8 +45,8 @@
       <array>
         <option value="_root_.play.twirl.api.Txt" />
         <option value="play.api.templates.PlayMagic._" />
-        <option value="_root_.play.twirl.api.JavaScript" />
         <option value="_root_.play.twirl.api.Xml" />
+        <option value="_root_.play.twirl.api.JavaScript" />
         <option value="_root_.play.twirl.api.Html" />
         <option value="_root_.play.twirl.api.TwirlHelperImports._" />
         <option value="_root_.play.twirl.api.TwirlFeatureImports._" />
@@ -49,7 +62,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views/gui" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -60,7 +73,12 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="views.gui" />
+      <recent name="views" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Fabian\Documents\My_Documents\Studium\Master\code\MPS\connect4\app\views\gui" />
       <recent name="C:\Users\Fabian\Documents\My_Documents\Studium\Master\code\MPS\connect4" />
     </key>
   </component>
@@ -75,6 +93,26 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Connect4" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="views.Connect4" />
+      <module name="connect4" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="views.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Connect4" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
     <option name="availableProjects">
@@ -103,8 +141,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4737007117361" />
-        <entry key="$PROJECT_DIR$/build.sbt" value="3206539399" />
+        <entry key="$PROJECT_DIR$/build.sbt" value="4244251905" />
         <entry key="$PROJECT_DIR$/project/build.properties" value="1134086237" />
         <entry key="$PROJECT_DIR$/project/plugins.sbt" value="2725094388" />
       </map>
@@ -133,7 +170,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579002415074</updated>
-      <workItem from="1579002420230" duration="7509000" />
+      <workItem from="1579002420230" duration="24226000" />
     </task>
     <task id="LOCAL-00001" summary="added singletons to controllers">
       <created>1579006028190</created>
@@ -177,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579011275337</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="swapping rounds">
+      <created>1579011764103</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1579011764103</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +243,7 @@
     <MESSAGE value="fixed bug in creating game" />
     <MESSAGE value="updated gitignore" />
     <MESSAGE value="updated insert chip" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated insert chip" />
+    <MESSAGE value="swapping rounds" />
+    <option name="LAST_COMMIT_MESSAGE" value="swapping rounds" />
   </component>
 </project>

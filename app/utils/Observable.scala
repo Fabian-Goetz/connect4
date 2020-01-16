@@ -1,10 +1,10 @@
 package utils
 
-import models.BoardModel
+import models.{BoardModel, RoundModel}
 
 
 trait Observer {
-  def update(board: BoardModel): Unit
+  def update(round: RoundModel): Unit
 }
 
 trait Observable {
@@ -14,5 +14,5 @@ trait Observable {
 
   def remove(s: Observer): Unit = subscribers = subscribers.filterNot(o => o == s)
 
-  def notifyObservers(board: BoardModel): Unit = subscribers.foreach(o => o.update(board))
+  def notifyObservers(round: RoundModel): Unit = subscribers.foreach(o => o.update(round))
 }

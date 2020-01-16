@@ -1,67 +1,119 @@
-/*
 package views.gui
 
-import controllers.{PlayerController, RoundController}
-import models.{GameModel, PlayerModel, RoundModel}
+import controllers.{BoardController, GameController}
+import models.{BoardModel, CreateGameRequest, GameModel, RoundModel}
+import utils.Observer
 
-import scala.concurrent.ExecutionContext.Implicits.global
-import scala.swing.event.ButtonClicked
-import scala.util.Success
-import swing._
+import scala.concurrent.{Await, Future}
+import scala.concurrent.duration.Duration
+import scala.swing.{Action, BorderPanel, BoxPanel, Button, Color, Dimension, FlowPanel, Font, Frame, GridPanel, Label, MainFrame, Menu, MenuBar, MenuItem, Orientation, Swing, TextField}
+import scala.swing.event.{Event, Key, MouseClicked}
+import scala.util.Try
 
-object SwingGUI extends SimpleSwingApplication {
-  val boardController = new BoardController()
-  val gameController = new GameController()
-  val playerController = new PlayerController()
-  val roundController = new RoundController()
+class CellClicked(val row: Int, val column: Int) extends Event
 
-  var game: Option[GameModel] = None
-  var currentRound: Option[RoundModel] = None
-  var player1: Option[PlayerModel] = None
-  var player2: Option[PlayerModel] = None
+class SwingGUI(gameController: GameControllerGui, boardController: BoardControllerGui) extends MainFrame with Observer {
+  listenTo(gameController)
+  listenTo(boardController)
 
+  val player1 = CreateGameRequest(name = "Fabian", color = "red", hasTurn = false)
+  val player2 = CreateGameRequest(name = "Dimitri", color = "blue", hasTurn = false)
+  val players: Seq[CreateGameRequest] = Seq(player1, player2)
 
-  def top = new MainFrame() {
-    title = "Connect4"
-    preferredSize = new swing.Dimension(400, 400)
+  var game: Try[GameModel] = Await.result(gameController.create(players), Duration.Inf)
+  var round = game.get.rounds(0)
+  var board = round.board
 
-    // Welcome
-    contents = new FlowPanel {
-      val player1label = new Label {
-        text = if(player1.isDefined) player1.get.name else ""
-      }
-      val player2Label = new Label {
-        text = if(player1.isDefined) player1.get.name else ""
-      }
-
-      contents += player1label
-      contents += player2Label
+  title = "HTWG Connect4"
 
 
-      val init = for {
-        newGame <- gameController.create
-        player1 <- playerController.create(newGame, "Fabi", "Red")
-        player2 <- playerController.create(newGame, "Dimi", "Blue")
-        gameWithPlayers <- {
-          (player1, player2) match {
-            case (Success(p1), Success(p2)) => gameController.addPlayers(newGame, Seq(p1._2, p2._2))
-          }
-
-        }
-        firstRound <- roundController.create(gameWithPlayers.get)
-      } yield firstRound
-
-      init.map { firstRound =>
-        println(firstRound)
-        game = Some(firstRound._1)
-        currentRound = Some(firstRound._2)
-        player1 = Some(game.get.players(0))
-        player1 = Some(game.get.players(1))
-        repaint()
-      }
-    }
-
+  def currentPlayer = new BoxPanel(Orientation.Horizontal) {
+    contents += new Label("It's your turn, " + round.currentPlayer.get.name)
   }
 
+  def winner = new BoxPanel(Orientation.Horizontal) {
+    contents += new Label(round.winner.get.name + " has won!")
+  }
+
+  def insertChip(round: RoundModel, column: Int) = boardController.insertChip(round, column)
+
+  def gridPanel = new GridPanel(game.get.rounds(0).board.width, game.get.rounds(0).board.height) {
+    background = java.awt.Color.BLACK
+
+    for {
+      row <- game.get.rounds(0).board.height to 0 by -1
+      column <- 0 to game.get.rounds(0).board.width
+    } {
+      if (row == game.get.rounds(0).board.height) {
+        contents += new BoxPanel(Orientation.Horizontal) {
+          val label: Label = new Label {
+            text = (column + 1).toString
+            font = new Font("Verdana", 1, 36)
+          }
+
+          contents += label
+          preferredSize = new Dimension(51, 51)
+          background = new Color(200, 200, 255)
+          border = Swing.BeveledBorder(Swing.Raised)
+          listenTo(mouse.clicks)
+          listenTo(boardController)
+          reactions += {
+            case MouseClicked(src, pt, mod, clicks, pops) =>
+              insertChip(round, column)
+              repaint
+          }
+        }
+      } else {
+        contents += new BoxPanel(Orientation.Horizontal) {
+          val chip = board.chips.find(x => x.position.x == column && x.position.y == row)
+
+          val label: Label = new Label {
+            text = if (chip.isDefined) chip.get.player.color else ""
+            font = new Font("Verdana", 1, 36)
+          }
+
+          contents += label
+          preferredSize = new Dimension(51, 51)
+          background = new Color(200, 200, 255)
+          border = Swing.BeveledBorder(Swing.Raised)
+          listenTo(mouse.clicks)
+          listenTo(boardController)
+          reactions += {
+            case MouseClicked(src, pt, mod, clicks, pops) =>
+              label.text = "B"
+              repaint
+
+          }
+        }
+      }
+    }
+  }
+
+  contents = new BorderPanel {
+    add(currentPlayer, BorderPanel.Position.North)
+    add(gridPanel, BorderPanel.Position.Center)
+  }
+
+  def gameOver = {
+    contents = new BorderPanel {
+      add(winner, BorderPanel.Position.Center)
+    }
+  }
+
+  def redraw = {
+    if (round.winner.isDefined) {
+      gameOver
+    } else {
+      contents = new BorderPanel {
+        add(currentPlayer, BorderPanel.Position.North)
+        add(gridPanel, BorderPanel.Position.Center)
+      }
+    }
+  }
+
+  override def update(r: RoundModel): Unit = {
+    round = r
+    board = round.board
+    redraw
+  };
 }
-*/
