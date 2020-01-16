@@ -76,14 +76,7 @@ class SwingGUI(gameController: GameControllerGui, boardController: BoardControll
           preferredSize = new Dimension(51, 51)
           background = new Color(200, 200, 255)
           border = Swing.BeveledBorder(Swing.Raised)
-          listenTo(mouse.clicks)
           listenTo(boardController)
-          reactions += {
-            case MouseClicked(src, pt, mod, clicks, pops) =>
-              label.text = "B"
-              repaint
-
-          }
         }
       }
     }
