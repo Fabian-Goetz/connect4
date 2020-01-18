@@ -9,7 +9,8 @@ import akka.util.Timeout
 import com.google.inject.{Guice, Injector}
 import controllers.{BoardController, GameController}
 import javax.inject.{Inject, Singleton}
-import views.gui.{BoardControllerGui, GameControllerGui, SwingGUI}
+import views.gui.SwingGUI
+import views.tui.Index
 
 import scala.concurrent.Await
 import scala.concurrent.duration._
@@ -25,5 +26,14 @@ object Connect4 {
 
     gui.visible = true
     gui.repaint()
+
+
+    val index = new Index(gameController, boardController)
+    index.startGame()
+
+    // Endless loop
+    endlessLoop()
   }
+
+  def endlessLoop(): Unit = while (true) Thread.sleep(10000)
 }

@@ -1,9 +1,7 @@
-package views.gui
+package views
 
 import daos.{BoardDao, GameDao, RoundDao}
-import javax.inject._
 import models.{BoardModel, CreateGameRequest, GameModel, PlayerModel}
-import play.api.mvc.{ControllerComponents, _}
 import services.GameService
 import utils.Observable
 

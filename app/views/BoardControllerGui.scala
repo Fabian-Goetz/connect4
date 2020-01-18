@@ -1,17 +1,15 @@
-package views.gui
+package views
 
 import daos.BoardDao
 import javax.inject._
 import models.{BoardModel, ChipModel, PositionModel, RoundModel}
-import play.api.mvc._
 import services.{BoardService, RoundService}
 import utils.Observable
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.concurrent.Future
 import scala.swing.Publisher
-import scala.swing.event.Event
-import scala.util.{Failure, Success, Try}
+import scala.util.{Failure, Success}
 
 /**
  * This controller creates an `Action` to handle HTTP requests to the
@@ -54,5 +52,3 @@ class BoardControllerGui extends Publisher with Observable {
     }
   }
 }
-
-case class GridSizeChanged(newSize: Int) extends Event

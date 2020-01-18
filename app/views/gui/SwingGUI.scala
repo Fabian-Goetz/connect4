@@ -3,6 +3,7 @@ package views.gui
 import controllers.{BoardController, GameController}
 import models.{BoardModel, CreateGameRequest, GameModel, RoundModel}
 import utils.Observer
+import views.{BoardControllerGui, GameControllerGui}
 
 import scala.concurrent.{Await, Future}
 import scala.concurrent.duration.Duration
@@ -42,7 +43,7 @@ class SwingGUI(gameController: GameControllerGui, boardController: BoardControll
 
     for {
       row <- game.get.rounds(0).board.height to 0 by -1
-      column <- 0 to game.get.rounds(0).board.width
+      column <- 0 until game.get.rounds(0).board.width
     } {
       if (row == game.get.rounds(0).board.height) {
         contents += new BoxPanel(Orientation.Horizontal) {
