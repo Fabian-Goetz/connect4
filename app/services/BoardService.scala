@@ -15,26 +15,27 @@ class BoardService {
    * @return
    **/
   def insertChip(board: BoardModel, chip: ChipModel): Future[Try[BoardModel]] = Future {
-  if (chip.position.x > board.width || chip.position.x < 0)
-    return Future.successful(Failure(new IllegalArgumentException(s"Column ${chip.position.x + 1} doesn't exist. Cannot insert $chip")))
-
-    val sameColumn: List[ChipModel] = board.chips.filter(_.position.x == chip.position.x)
-    val maybeMaxHeight: Option[Int] = sameColumn.map(_.position.y).maxOption
-    maybeMaxHeight match {
-      case Some(maxHeight) =>
-        if (maxHeight < board.height - 1) {
-          val newPosition = chip.position.copy(y = maxHeight + 1)
+    if (chip.position.x > board.width || chip.position.x < 0) {
+      Failure(new IllegalArgumentException(s"Column ${chip.position.x + 1} doesn't exist. Cannot insert $chip"))
+    } else {
+      val sameColumn: List[ChipModel] = board.chips.filter(_.position.x == chip.position.x)
+      val maybeMaxHeight: Option[Int] = sameColumn.map(_.position.y).maxOption
+      maybeMaxHeight match {
+        case Some(maxHeight) =>
+          if (maxHeight < board.height - 1) {
+            val newPosition = chip.position.copy(y = maxHeight + 1)
+            val newChip = chip.copy(position = newPosition)
+            val newBoard = board.copy(chips = newChip :: board.chips)
+            Success(newBoard)
+          } else {
+            Failure(new IllegalArgumentException(s"Column ${chip.position.x + 1} is already full. Cannot insert $chip"))
+          }
+        case _ => // Column is empty
+          val newPosition = chip.position.copy(y = 0)
           val newChip = chip.copy(position = newPosition)
           val newBoard = board.copy(chips = newChip :: board.chips)
           Success(newBoard)
-        } else {
-          Failure(new IllegalArgumentException(s"Column ${chip.position.x + 1} is already full. Cannot insert $chip"))
-        }
-      case _ => // Column is empty
-        val newPosition = chip.position.copy(y = 0)
-        val newChip = chip.copy(position = newPosition)
-        val newBoard = board.copy(chips = newChip :: board.chips)
-        Success(newBoard)
+      }
     }
   }
 

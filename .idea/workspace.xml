@@ -2,22 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25d99617-8625-4077-9a1f-6c644b6fd9c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/daos/ChipDao.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/controllers/BoardControllerSpec.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/services/RoundServiceSpec.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/connect4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/connect4.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/BoardController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/BoardController.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/GameController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/GameController.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/HomeController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/HomeController.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/PlayerController.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/RoundController.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/RoutingController.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/RoutingController.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/services/BoardService.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/BoardService.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/GameService.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/GameService.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/services/PlayerService.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tui/Index.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tui/Index.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/GameControllerSpec.scala" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/GameControllerSpec.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/daos/GameDaoSpec.scala" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +97,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="ScalaTest.BoardControllerSpec">
+  <component name="RunManager" selected="ScalaTest.ScalaTests in 'test'">
     <configuration name="Connect4" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="views.Connect4" />
       <module name="connect4" />
@@ -196,14 +183,14 @@
           <option value="controllers.HomeControllerSpec" />
           <option value="controllers.BoardControllerSpec" />
           <option value="controllers.GameControllerSpec" />
-          <option value="controllers.HomeControllerSpec" />
           <option value="controllers.BoardControllerSpec" />
+          <option value="controllers.HomeControllerSpec" />
           <option value="services.GameServiceSpec" />
           <option value="services.BoardServiceSpec" />
           <option value="services.RoundServiceSpec" />
+          <option value="services.RoundServiceSpec" />
           <option value="services.GameServiceSpec" />
           <option value="services.BoardServiceSpec" />
-          <option value="services.RoundServiceSpec" />
         </list>
       </option>
       <option name="envs">
@@ -224,11 +211,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="ScalaTest.ScalaTests in 'test'" />
         <item itemvalue="ScalaTest.BoardControllerSpec" />
         <item itemvalue="ScalaTest.ScalaTests in 'test'" />
-        <item itemvalue="JUnit.controllers in connect4" />
-        <item itemvalue="ScalaTest.RoundServiceSpec" />
         <item itemvalue="Application.Connect4" />
+        <item itemvalue="ScalaTest.BoardControllerSpec" />
       </list>
     </recent_temporary>
   </component>
@@ -293,7 +280,8 @@
       <workItem from="1579266447039" duration="5982000" />
       <workItem from="1579436373059" duration="713000" />
       <workItem from="1579437126107" duration="4837000" />
-      <workItem from="1579448210554" duration="11420000" />
+      <workItem from="1579448210554" duration="11646000" />
+      <workItem from="1579465061442" duration="519000" />
     </task>
     <task id="LOCAL-00001" summary="added singletons to controllers">
       <created>1579006028190</created>
@@ -372,7 +360,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579436762267</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="refactoring and test added">
+      <created>1579464790824</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1579464790824</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,6 +396,7 @@
     <MESSAGE value="refactoring" />
     <MESSAGE value="TUI and GUI synchronized" />
     <MESSAGE value="tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="tests" />
+    <MESSAGE value="refactoring and test added" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring and test added" />
   </component>
 </project>
