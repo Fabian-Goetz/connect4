@@ -15,6 +15,9 @@ class BoardService {
    * @return
    **/
   def insertChip(board: BoardModel, chip: ChipModel): Future[Try[BoardModel]] = Future {
+  if (chip.position.x > board.width || chip.position.x < 0)
+    return Future.successful(Failure(new IllegalArgumentException(s"Column ${chip.position.x + 1} doesn't exist. Cannot insert $chip")))
+
     val sameColumn: List[ChipModel] = board.chips.filter(_.position.x == chip.position.x)
     val maybeMaxHeight: Option[Int] = sameColumn.map(_.position.y).maxOption
     maybeMaxHeight match {

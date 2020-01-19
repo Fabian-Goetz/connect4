@@ -5,8 +5,8 @@ import models.{CreateGameRequest, InsertChipRequest}
 import play.api.libs.json.{JsError, JsSuccess, Json}
 import play.api.mvc.{AnyContent, ControllerComponents, _}
 
-import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.Future
 import scala.util.{Failure, Success}
 
 /**
@@ -26,13 +26,14 @@ class RoutingController @Inject()(controllerComponents: ControllerComponents,
    * will be called when the application receives a `GET` request with
    * a path of `/`.
    */
-  def index() = Action { implicit request: Request[AnyContent] =>
+  def index(): Action[AnyContent] = Action { implicit request: Request[AnyContent] =>
     Ok(views.html.index())
   }
 
 
   /**
    * Creates a game from a list of player names and colors
+   *
    * @return
    */
   def createGame: Action[AnyContent] = Action.async { implicit request =>
@@ -48,9 +49,10 @@ class RoutingController @Inject()(controllerComponents: ControllerComponents,
 
   /**
    * Inserts a chip into a certain column
+   *
    * @return
    */
-  def insertChip: Action[AnyContent] = Action.async { implicit request =>
+  def insertChip(): Action[AnyContent] = Action.async { implicit request =>
     request.body.asJson.map(_.validate[InsertChipRequest] match {
       case JsSuccess(validRequest, _) =>
         boardController.insertChip(validRequest.round, validRequest.column).map {

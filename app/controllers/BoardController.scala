@@ -2,13 +2,13 @@ package controllers
 
 import daos.BoardDao
 import javax.inject._
-import models.{BoardModel, ChipModel, PositionModel, RoundModel}
+import models.{ChipModel, PositionModel, RoundModel}
 import play.api.mvc._
 import services.{BoardService, RoundService}
 import utils.Observable
 
-import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.Future
 import scala.swing.Publisher
 import scala.util.{Failure, Success, Try}
 
@@ -24,13 +24,6 @@ class BoardController @Inject()(controllerComponents: ControllerComponents,
                                ) extends AbstractController(controllerComponents) with Observable with Publisher {
 
   /**
-   * Creates a board
-   *
-   * @return
-   */
-  def create: Future[BoardModel] = boardDao.create
-
-  /**
    * Let's the player insert a chip into the board
    *
    * @param round  : round
@@ -42,7 +35,7 @@ class BoardController @Inject()(controllerComponents: ControllerComponents,
       case Some(player) =>
         val chip = ChipModel(player, PositionModel(x = column))
         boardService.insertChip(round.board, chip).flatMap {
-          case Success(b) => // TODO check for winner
+          case Success(b) =>
             roundService.checkForWinner(round.copy(board = b)).map {
               case Some(winnerRound) => Success(Some(roundService.swapTurns(winnerRound)))
               case _ => Success(Some(roundService.swapTurns(round)))

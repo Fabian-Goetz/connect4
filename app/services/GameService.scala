@@ -36,6 +36,10 @@ class GameService {
    * @return
    */
   def addPlayers(game: GameModel, playersToAdd: Seq[PlayerModel]): Future[Try[GameModel]] = {
+    val nameTooShort = playersToAdd.exists(p => p.name.length == 0)
+    if(nameTooShort)
+      return Future.successful(Failure(new IllegalArgumentException(s"Can't add players $playersToAdd to the game $game because of duplicates")))
+
     val doDuplicatesExist = playersToAdd.map(player => playersToAdd.count(x => x.name == player.name || x.color == player.color)).sum != playersToAdd.size
 
     if (doDuplicatesExist) {

@@ -2,13 +2,12 @@ package controllers
 
 import daos.{BoardDao, GameDao, RoundDao}
 import javax.inject._
-import models.{BoardModel, ChipModel, CreateGameRequest, GameModel, PlayerModel}
-import play.api.libs.json.{JsError, JsSuccess, Json}
-import play.api.mvc.{AnyContent, ControllerComponents, _}
+import models.{BoardModel, CreateGameRequest, GameModel, PlayerModel}
+import play.api.mvc.{ControllerComponents, _}
 import services.GameService
 
-import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.Future
 import scala.swing.Publisher
 import scala.util.{Failure, Success, Try}
 
@@ -18,17 +17,17 @@ import scala.util.{Failure, Success, Try}
  */
 @Singleton
 class GameController @Inject()(controllerComponents: ControllerComponents,
-                               roundController: RoundController,
                                boardController: BoardController,
                                gameService: GameService,
                                gameDao: GameDao,
                                roundDao: RoundDao,
                                boardDao: BoardDao
-                              ) extends AbstractController(controllerComponents) with Publisher{
+                              ) extends AbstractController(controllerComponents) with Publisher {
 
   /**
    * Creates a new game with a new round and 2 players
-   * @param request: request for the 2 players
+   *
+   * @param request : request for the 2 players
    * @return
    */
   def create(request: Seq[CreateGameRequest]): Future[Try[GameModel]] = {

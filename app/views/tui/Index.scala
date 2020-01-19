@@ -74,7 +74,6 @@ class Index(gameController: GameControllerGui, boardController: BoardControllerG
 
   def gameOver(): Unit = {
     println(round.winner.get.name, " has won!")
-    System.exit(0)
   }
 
   override def update(round: RoundModel): Unit = {

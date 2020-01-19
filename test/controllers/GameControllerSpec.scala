@@ -4,6 +4,11 @@ import models.{GameModel, PlayerModel}
 import org.scalatest.{Outcome, WordSpec}
 import play.api.Application
 import play.api.inject.guice.GuiceApplicationBuilder
+import play.api.libs.json.Json
+import play.api.mvc.AnyContentAsJson
+import play.api.test.FakeRequest
+import play.test.WithApplication
+import play.api.test.Helpers._
 
 import scala.concurrent.Await
 import scala.concurrent.duration.Duration
@@ -11,9 +16,9 @@ import scala.util.{Failure, Success, Try}
 
 class GameControllerSpec extends WordSpec {
 
-  val app = new GuiceApplicationBuilder().build()
+  val application: Application = GuiceApplicationBuilder().build()
 
-  val gameController = getGameController(app)
+  val gameController = getGameController(application)
 
 
   def getGameController(implicit app: Application): GameController = {
@@ -35,6 +40,22 @@ class GameControllerSpec extends WordSpec {
       val result = Await.result(gameController.create, Duration.Inf)
       assert(result.isInstanceOf[GameModel])
     }
+    /*"respond to the index Action" in new WithApplication {
+      val controller = app.injector.instanceOf[controllers.GameController]
+      val result     = controller.index()(FakeRequest())
+
+      status(result) must equalTo(OK)
+      contentType(result) must beSome("text/plain")
+      contentAsString(result) must contain("Hello Bob")
+    }
+    "respond to the index Action" in new WithApplication(applicationWithRouter) {
+      val Some(result) = route(app, FakeRequest(GET, "/Bob"))
+
+      status(result) must equalTo(OK)
+      contentType(result) must beSome("text/html")
+      charset(result) must beSome("utf-8")
+      contentAsString(result) must contain("Hello Bob")
+    }*/
     "add a player to the game" in {
       val game = GameModel()
       val player = PlayerModel("Max Mustermann")
