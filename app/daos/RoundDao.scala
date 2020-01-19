@@ -9,7 +9,8 @@ class RoundDao {
 
   /**
    * Creates a new round
-   * @param board: board for the round
+   *
+   * @param board : board for the round
    * @return
    */
   def create(board: BoardModel): Future[RoundModel] = Future {

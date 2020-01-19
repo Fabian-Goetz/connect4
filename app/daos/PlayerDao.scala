@@ -19,7 +19,8 @@ class PlayerDao {
 
   /**
    * Updates a given player in the game
-   * @param playerToUpdate: player to update
+   *
+   * @param playerToUpdate : player to update
    * @return
    */
   def update(playerToUpdate: PlayerModel): Future[PlayerModel] = Future {

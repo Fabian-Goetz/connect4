@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="25d99617-8625-4077-9a1f-6c644b6fd9c2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/controllers/GameControllerSpec.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/daos/GameDaoSpec.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/services/BoardServiceSpec.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/services/GameServiceSpec.scala" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Connect4.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Connect4.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/gui/BoardControllerGui.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/BoardControllerGui.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/gui/GameControllerGui.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/GameControllerGui.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/gui/GridInterface.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/gui/Index.scala" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/gui/SwingGUI.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/gui/SwingGUI.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tui/Index.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/tui/Index.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/tui/Main.scala" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/daos/BoardDao.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/daos/BoardDao.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/daos/GameDao.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/daos/GameDao.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/daos/PlayerDao.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/daos/PlayerDao.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/daos/RoundDao.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/daos/RoundDao.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/services/RoundService.scala" beforeDir="false" afterPath="$PROJECT_DIR$/app/services/RoundService.scala" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +64,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/views/gui" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -83,8 +83,8 @@
       <recent name="views" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Fabian\Documents\My_Documents\Studium\Master\code\MPS\connect4\app\views\gui" />
       <recent name="C:\Users\Fabian\Documents\My_Documents\Studium\Master\code\MPS\connect4" />
+      <recent name="C:\Users\Fabian\Documents\My_Documents\Studium\Master\code\MPS\connect4\app\views\gui" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -126,9 +126,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameControllerSpec" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="connect4" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="testKind" value="Class" />
+      <option name="envs">
+        <map />
+      </option>
+      <option name="javaOptions" value="" />
+      <option name="jrePath" />
+      <option name="searchTest" value="Across module dependencies" />
+      <option name="showProgressMessages" value="true" />
+      <option name="testArgs" value="" />
+      <option name="testClassPath" value="controllers.GameControllerSpec" />
+      <option name="useSbt" value="false" />
+      <option name="useUiWithSbt" value="false" />
+      <option name="workingDirectory" value="C:\Users\Fabian\Documents\My_Documents\Studium\Master\code\MPS\connect4" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Connect4" />
+        <item itemvalue="ScalaTest.GameControllerSpec" />
+        <item itemvalue="ScalaTest.GameControllerSpec" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -191,7 +213,8 @@
       <option name="presentableId" value="Default" />
       <updated>1579002415074</updated>
       <workItem from="1579002420230" duration="27273000" />
-      <workItem from="1579266447039" duration="2884000" />
+      <workItem from="1579266447039" duration="5982000" />
+      <workItem from="1579436373059" duration="271000" />
     </task>
     <task id="LOCAL-00001" summary="added singletons to controllers">
       <created>1579006028190</created>
@@ -256,7 +279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579183758964</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="TUI and GUI synchronized">
+      <created>1579339789637</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1579339789637</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -283,6 +313,7 @@
     <MESSAGE value="swapping rounds" />
     <MESSAGE value="gui" />
     <MESSAGE value="refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring" />
+    <MESSAGE value="TUI and GUI synchronized" />
+    <option name="LAST_COMMIT_MESSAGE" value="TUI and GUI synchronized" />
   </component>
 </project>

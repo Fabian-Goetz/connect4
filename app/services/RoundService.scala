@@ -1,9 +1,11 @@
 package services
 
 import models.{BoardModel, ChipModel, GameModel, RoundModel}
+import play.api.libs.json.JsResult.Exception
 
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
+import scala.util.{Failure, Success, Try}
 
 class RoundService {
   val boardService = new BoardService()
@@ -57,18 +59,18 @@ class RoundService {
    *
    * @return
    **/
-  def nextRound(currentRound: RoundModel): RoundModel = {
+  def nextRound(currentRound: RoundModel): Try[RoundModel] = {
     val swappedTurns: RoundModel = swapTurns(currentRound)
     val maybeNextPlayer = swappedTurns.players.find(_.hasTurn)
     maybeNextPlayer match {
       case Some(nextPlayer) =>
-        RoundModel(
+        Success(RoundModel(
           board = BoardModel(),
           players = currentRound.players,
           currentPlayer = Some(nextPlayer),
           roundNumber = currentRound.roundNumber + 1
-        )
-      case _ => throw new InternalError(s"Something went wrong while instantiating a new round.")
+        ))
+      case _ => Failure(new InternalError(s"Something went wrong while instantiating a new round."))
     }
   }
 

@@ -8,6 +8,7 @@ import scala.concurrent.Future
 class BoardDao {
   /**
    * Creates a board
+   *
    * @return
    */
   def create: Future[BoardModel] = Future {
